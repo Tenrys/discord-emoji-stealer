@@ -1,7 +1,7 @@
 /*@cc_on
 @if (@_jscript)
     var shell = WScript.CreateObject("WScript.Shell");
-    shell.Run("https://github.com/Tenrys/discord-emoji-stealer/blob/master/README.md#Usage");
+    shell.Run("https://github.com/Tenrys/discord-emoji-stealer/blob/master/README.md#usage");
     WScript.Quit();
 @else@*/
 
