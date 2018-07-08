@@ -17,21 +17,23 @@ async function getToken() {
     console.log("Looking for Discord process...")
     let name
     if (!name) {
-        await (new Promise((resolve) => { ps.lookup({
-            command: "discord",
-        }, (err, resList) => {
-            if (err) throw new Error(err)
+        await (new Promise((resolve) => {
+            ps.lookup({
+                command: "discord",
+            }, (err, resList) => {
+                if (err) throw new Error(err)
 
-            for (const res of resList) {
-                if (res) {
-                    name = path.basename(res.command, path.extname(res.command)).toLowerCase()
+                for (const res of resList) {
+                    if (res) {
+                        name = path.basename(res.command, path.extname(res.command)).toLowerCase()
 
-                    console.log(`Found ${name}!`)
-                    resolve()
-                    break
+                        console.log(`Found ${name}!`)
+                        resolve()
+                        break
+                    }
                 }
-            }
-        })}))
+            })
+        }))
     }
 
     console.log("Copying application's Local Storage to temporary file...")
