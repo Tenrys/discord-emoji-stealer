@@ -20,9 +20,7 @@ async function getToken() {
         await (new Promise((resolve) => { ps.lookup({
             command: "discord",
         }, (err, resList) => {
-            if (err) {
-                throw new Error(err)
-            }
+            if (err) throw new Error(err)
 
             for (const res of resList) {
                 if (res) {
@@ -39,9 +37,7 @@ async function getToken() {
     console.log("Copying application's Local Storage to temporary file...")
     let dbPath = path.join(appData, name, "Local Storage", "https_discordapp.com_0.localstorage")
     fs.copyFile(dbPath, "./localstorage.tmp", (err) => {
-        if (err) {
-            throw new Error(err)
-        }
+        if (err) throw new Error(err)
 
         dbPath = "./localstorage.tmp"
 
