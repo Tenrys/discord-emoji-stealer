@@ -25,18 +25,21 @@ client.on("ready", async function() {
         let emojis = guild.emojis.array()
         for (const emoji of emojis) {
             let filePath = path.join(folderPath, emoji.name + path.extname(emoji.url))
-
-            await (new Promise(resolve => {
-                https.get(emoji.url, function(res) {
-                    console.log(emoji.url + " => " + filePath)
-                    let stream = fs.createWriteStream(filePath)
-                    res.pipe(stream)
-                    stream.on("finish", function() {
-                        // console.log("Downloaded")
-                        resolve()
+            if (!fs.existsSync(filePath)) {
+                await (new Promise(resolve => {
+                    https.get(emoji.url, function(res) {
+                        console.log(emoji.url + " => " + filePath)
+                        let stream = fs.createWriteStream(filePath)
+                        res.pipe(stream)
+                        stream.on("finish", function() {
+                            // console.log("Downloaded")
+                            resolve()
+                        })
                     })
-                })
-            }))
+                }))
+            } else {
+                console.log(filePath + " exists, skipping")
+            }
         }
     }
 
