@@ -9,8 +9,10 @@ Tested on Windows 10 x64 only, please create an issue if it is incompatible with
 
 1. Install node.js
 2. Clone the repository
-3. Run `node index.js` in the cloned repository's folder.
-4. The script should now start downloading every custom emoji of every server you're in, one by one, in an adjacent folder called `emojis`. It'll exit automatically when it's done.
+3. Open a command prompt inside of the cloned repository's folder.
+4. Run `npm i`. This will install the script's dependencies.
+5. Run `node index.js`. This will run the script.
+6. The script should now start downloading every custom emoji of every server you're in, one by one, in an adjacent folder called `emojis`. It'll exit automatically when it's done.
 
 ## [Donate](https://paypal.me/Tenrys)
 
