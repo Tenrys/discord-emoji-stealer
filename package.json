@@ -1,0 +1,13 @@
+{
+  "name": "discord-emoji-stealer",
+  "version": "1.0.0",
+  "description": "Downloads every custom emoji from every Discord server you're in.",
+  "main": "index.js",
+  "author": "Tenrys",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "github:hydrabolt/discord.js",
+    "sanitize-filename": "^1.6.1",
+    "shelljs": "^0.8.2"
+  }
+}
