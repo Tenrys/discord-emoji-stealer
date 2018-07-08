@@ -27,7 +27,7 @@ client.on("ready", async function() {
             let filePath = path.join(folderPath, emoji.name + path.extname(emoji.url))
             if (!fs.existsSync(filePath)) {
                 await (new Promise(resolve => {
-                    https.get(emoji.url, function(res) {
+                    https.get(emoji.url, res => {
                         console.log(emoji.url + " => " + filePath)
                         let stream = fs.createWriteStream(filePath)
                         res.pipe(stream)
