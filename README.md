@@ -4,12 +4,12 @@ Downloads every custom emoji from every Discord server you're in.
 
 ## Usage
 
+You need to have a running Discord client in order for this script to work.
+Tested on Windows 10 x64 only, please create an issue if it is incompatible with your platform.
+
 1. Install node.js
 2. Clone the repository
-3. Run `node index.js token` in the cloned repository's folder.
-    - `token` is your account's token, used in order to log in to your account and know what servers you're on, as well as the URLs to their emojis.
-    - You can get your token by pressing `Ctrl+Shift+I` in your Discord client, going to the `Application` tab, then `Local Storage`, `https://discordapp.com`.
-    From there, just copy the `token` field, and paste it in the command.
+3. Run `node index.js` in the cloned repository's folder.
 4. The script should now start downloading every custom emoji of every server you're in, one by one, in an adjacent folder called `emojis`. It'll exit automatically when it's done.
 
 ## [Donate](https://paypal.me/Tenrys)

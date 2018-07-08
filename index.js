@@ -47,8 +47,7 @@ client.on("ready", async function() {
     process.exit()
 })
 
-let token = process.argv.slice(2)[0]
-client.login(token)
+require("./get_token.js")().then(token => client.login(token))
 
 /*@end@*/
 
