@@ -7,7 +7,7 @@ I made this so I could eventually leave the dozens of Discord servers I'm in tha
 ## Usage
 
 You need to have a running Discord client in order for this script to work.
-Tested on Windows 10 x64 only, please create an issue if it is incompatible with your platform.
+Tested on Windows 10 x64 only, with Node version 8.11.3, please create an issue if it is incompatible with your platform and Node version.
 
 [node.js](https://nodejs.org/en/) and npm (included with node.js) are required to get this going.
 

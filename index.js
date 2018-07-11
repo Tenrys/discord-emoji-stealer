@@ -31,7 +31,7 @@ client.on("ready", async function() {
                         console.log(emoji.url + " => " + filePath)
                         let stream = fs.createWriteStream(filePath)
                         res.pipe(stream)
-                        stream.on("finish", function() {
+                        stream.on("finish", () => {
                             // console.log("Downloaded")
                             resolve()
                         })

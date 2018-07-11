@@ -38,16 +38,15 @@ async function getToken() {
 
     console.log("Copying application's Local Storage to temporary file...")
     let dbPath = path.join(appData, name, "Local Storage", "https_discordapp.com_0.localstorage")
-    fs.copyFile(dbPath, "./localstorage.tmp", err => {
-        if (err) throw new Error(err)
-
-        dbPath = "./localstorage.tmp"
-
-        console.log("Success!")
-    })
+    fs.copyFileSync(dbPath, "./localstorage.tmp")
+    dbPath = "./localstorage.tmp"
+    console.log("Success!")
 
     console.log("Connecting to Local Storage SQLite database...")
-    let db = await sqlite.open(dbPath).then(() => console.log("Connected!"))
+    let db = await sqlite.open(dbPath).then((db) => {
+        console.log("Connected!")
+        return db
+    })
     let token = await db.get("SELECT value FROM ItemTable WHERE key = 'token'").then(res => {
         let token = /^"(.*)"$/gi.exec(res.value.toString("utf16le"))[1]
 
