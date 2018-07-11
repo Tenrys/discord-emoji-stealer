@@ -15,6 +15,7 @@ Tested on Windows 10 x64 only, with Node version 8.11.3, please create an issue 
     - If you downloaded the repository, it will be a `.zip` file to extract.
 2. Open a command prompt / terminal inside of the repository's folder.
 3. Run `npm i`. This will install the script's dependencies.
+    - Ignore any warnings.
 4. Run `node index.js`. This will run the script.
 5. The script should now start downloading every custom emoji of every server you're in, one by one, in an adjacent folder called `emojis`. It'll exit automatically when it's done.
 

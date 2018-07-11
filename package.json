@@ -2,6 +2,8 @@
   "name": "discord-emoji-stealer",
   "version": "1.0.0",
   "description": "Downloads every custom emoji from every Discord server you're in.",
+  "repository": "https://github.com/Tenrys/discord-emoji-stealer",
+  "private": true,
   "main": "index.js",
   "author": "Tenrys",
   "license": "ISC",
