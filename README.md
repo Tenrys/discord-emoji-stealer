@@ -1,4 +1,4 @@
-# discord-emoji-stealer -MACOS-
+# discord-emoji-stealer
 
 Downloads every custom emoji from every Discord server you're in.
 
@@ -20,30 +20,20 @@ Tested on Windows 10 x64 only, with Node version 8.11.3, please create an issue 
 5. The script should now start downloading every custom emoji of every server you're in, one by one, in an adjacent folder called `emojis`. It'll exit automatically when it's done.
 
 
-TROUBLESHOOT:
--
+## Troubleshooting
 
-sudo npm i 
+On Linux, run
 
-*bunch of errors*
+`sudo npm i`
 
-DO:
--
+If vulnerabilities were found, run
 
-sudo npm audit fix 
+`sudo npm audit fix`
 
-*still bunch of errors*
+If that doesn't work, try
 
-DO:
--
+`sudo npm audit fix --force`
 
-sudo npm audit fix --force 
+You may still get warnings but the script should now work properly.
 
-*warnings*
-
-RUN:
--
-
-node index.js 
-
-*works*
+`node index.js`
