@@ -1,4 +1,4 @@
-# discord-emoji-stealer
+# discord-emoji-stealer -MACOS-
 
 Downloads every custom emoji from every Discord server you're in.
 
