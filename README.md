@@ -21,6 +21,7 @@ Tested on Windows 10 x64 only, with Node version 8.11.3, please create an issue 
 
 
 TROUBLESHOOT:
+
 sudo npm i -
 *bunch of errors*
 
