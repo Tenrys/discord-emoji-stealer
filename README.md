@@ -20,7 +20,7 @@ Tested on Windows 10 x64 only, with Node version 8.11.3, please create an issue 
 5. The script should now start downloading every custom emoji of every server you're in, one by one, in an adjacent folder called `emojis`. It'll exit automatically when it's done.
 
 
-TROUBlESHOOT:
+TROUBLESHOOT:
 sudo npm i
 *bunch of errors*
 
