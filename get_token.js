@@ -10,7 +10,7 @@ const fs = require("fs")
 const path = require("path")
 const ps = require("ps-node")
 
-let appData = process.env.APPDATA || (process.platform == "darwin" ? process.env.HOME + "Library/Preferences" : "/var/local")
+let appData = process.env.APPDATA || (process.platform == "darwin" ? process.env.HOME + "/Library/Application Support" : "/var/local")
 
 async function getToken() {
     // Find process name so we know what directory to peek inside in AppData
@@ -37,6 +37,8 @@ async function getToken() {
     }
 
     console.log("Copying application's Local Storage to temporary file...")
+    console.log(`appData: ${appData}, name: ${name}`);
+
     let dbPath = path.join(appData, name, "Local Storage", "https_discordapp.com_0.localstorage")
     fs.copyFileSync(dbPath, "./localstorage.tmp")
     dbPath = "./localstorage.tmp"
