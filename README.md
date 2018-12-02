@@ -22,17 +22,24 @@ Tested on Windows 10 x64 only, with Node version 8.11.3, please create an issue 
 
 TROUBLESHOOT:
 
-sudo npm i -
+sudo npm i 
+-
 *bunch of errors*
 
 DO:
-sudo npm audit fix -
+
+sudo npm audit fix 
+-
 *still bunch of errors*
 
 DO:
-sudo npm audit fix --force -
+
+sudo npm audit fix --force 
+-
 *warnings*
 
 RUN:
-node index.js -
+
+node index.js 
+-
 *works*
