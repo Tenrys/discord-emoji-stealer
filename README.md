@@ -4,6 +4,10 @@ Downloads every custom emoji from every Discord server you're in.
 
 I made this so I could eventually leave the dozens of Discord servers I'm in that I don't participate to, which clog my emoji picker with tons of trash that I don't use, and finally make my own personal emoji servers with my favorite ones.
 
+<h1 style="color: red;">WARNING</h1>
+
+You should only expect this to work on stable Discord.
+
 ## Usage
 
 You need to have a running Discord client in order for this script to work.
@@ -18,7 +22,6 @@ Tested on Windows 10 x64 only, with Node version 8.11.3, please create an issue 
     - Ignore any warnings.
 4. Run `node index.js`. This will run the script.
 5. The script should now start downloading every custom emoji of every server you're in, one by one, in an adjacent folder called `emojis`. It'll exit automatically when it's done.
-
 
 ## Troubleshooting
 

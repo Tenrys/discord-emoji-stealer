@@ -39,7 +39,19 @@ async function getToken() {
     console.log("Copying application's Local Storage to temporary file...")
     console.log(`appData: ${appData}, name: ${name}`);
 
-    let dbPath = path.join(appData, name, "Local Storage", "https_discordapp.com_0.localstorage")
+    let dbPath = path.join(appData, name, "Local Storage")
+    let files = fs.readdirSync(dbPath)
+    files.forEach(file => {
+        if (fs.statSync(path.join(dbPath, file)).isFile()) {
+            dbPath = path.join(dbPath, file) // Try first db
+            return
+        }
+    })
+    if (!fs.statSync(dbPath).isFile()) {
+        console.error("Could not find local storage!")
+        process.exit(1)
+        return
+    }
     fs.copyFileSync(dbPath, "./localstorage.tmp")
     dbPath = "./localstorage.tmp"
     console.log("Success!")

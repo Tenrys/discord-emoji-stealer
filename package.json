@@ -8,7 +8,7 @@
   "author": "Tenrys",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "github:hydrabolt/discord.js",
+    "discord.js": "github:discordjs/discord.js",
     "ps-node": "^0.1.6",
     "sanitize-filename": "^1.6.1",
     "shelljs": "^0.8.2",
